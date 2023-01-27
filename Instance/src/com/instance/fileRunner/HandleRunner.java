@@ -1,10 +1,16 @@
 package com.instance.fileRunner;
 
+import com.instance.file.Handle;
+
+
 public class HandleRunner {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		new Handle();
+		new Handle();
+		new Handle();
+		new Handle();
+		new Handle();
 	}
 
 }

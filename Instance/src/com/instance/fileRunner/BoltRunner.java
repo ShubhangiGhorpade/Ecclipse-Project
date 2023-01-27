@@ -1,9 +1,16 @@
 package com.instance.fileRunner;
 
+import com.instance.file.Bolt;
+
+
 public class BoltRunner {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		new Bolt();
+		new Bolt();
+		new Bolt();
+		new Bolt();
+		new Bolt();
 
 	}
 

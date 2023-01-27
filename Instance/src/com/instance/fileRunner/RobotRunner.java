@@ -1,10 +1,15 @@
 package com.instance.fileRunner;
 
+import com.instance.file.Robot;
+
 public class RobotRunner {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		new Robot();
+		new Robot();
+		new Robot();
+		new Robot();
+		new Robot();
 	}
 
 }

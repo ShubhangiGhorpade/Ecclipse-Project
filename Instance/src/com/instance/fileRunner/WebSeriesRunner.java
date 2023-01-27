@@ -1,9 +1,15 @@
 package com.instance.fileRunner;
 
+import com.instance.file.WebSeries;
+
 public class WebSeriesRunner {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		new WebSeries();
+		new WebSeries();
+		new WebSeries();
+		new WebSeries();
+		new WebSeries();
 
 	}
 

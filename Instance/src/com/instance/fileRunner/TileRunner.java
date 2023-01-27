@@ -1,9 +1,15 @@
 package com.instance.fileRunner;
 
+import com.instance.file.Tile;
+
 public class TileRunner {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		new Tile();
+		new Tile();
+		new Tile();
+		new Tile();
+		new Tile();
 
 	}
 
