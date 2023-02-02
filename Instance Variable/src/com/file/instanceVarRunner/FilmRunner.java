@@ -13,6 +13,8 @@ public class FilmRunner {
 		System.out.println("Song :"+ref.song);
 		System.out.println("Cost :"+ref.cost);
 		
+		System.out.println("     ");
+		
 		ref.filmName="Brahmastra";
 		ref.hero="Ranbir";
 		ref.heroin="Alia";
@@ -25,6 +27,8 @@ public class FilmRunner {
 		System.out.println("Heroin :"+ref.heroin);
 		System.out.println("Song :"+ref.song);
 		System.out.println("Cost :"+ref.cost);
+		
+		System.out.println("     ");
 		
 		Film ref1=new Film();
 		ref1.filmName="Yeh jawani hai diwani";

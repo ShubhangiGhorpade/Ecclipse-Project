@@ -27,6 +27,29 @@ public class SatelliteRunner {
 		ref.presence=true;
 		
 		ref.display();
+		
+		Satellite ref1=new Satellite();
+		ref1.display();
+		ref1.name="Kalpana";
+		ref1.type="Expermintal";
+		ref1.capacity=90;
+		ref1.orbitName="METSAT-1";
+		ref1.payLoadLevel=14;
+		ref1.payLoadMat="graphite";
+		ref1.satelliteMat="aluminium";
+		ref1.location="Bangalore";
+		ref1.manufacture="Silicon";
+		ref1.destroy=20;
+		ref1.lifeSpan=10;
+		ref1.length=150;
+		ref1.weight=55;
+		ref1.gravity=98;
+		ref1.launch="Wednesday";
+		ref1.team="Domestic";
+		ref1.land="Sand";
+		ref1.presence=false;
+		
+		ref.display();
 }
 
 }
