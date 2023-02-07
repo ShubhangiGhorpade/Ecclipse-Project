@@ -17,4 +17,4 @@ public class Camera {
 		System.out.println("Pixel :" + this.pixel);
 		System.out.println("Angel :" + this.angle);
 	}
-}
+}	
