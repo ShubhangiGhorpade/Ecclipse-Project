@@ -1,3 +1,4 @@
+
 package com.xworkz.association.thing;
 
 public class Wallet {
