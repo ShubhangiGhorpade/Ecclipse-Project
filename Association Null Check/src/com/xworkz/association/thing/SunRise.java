@@ -1,4 +1,4 @@
-package com.java.association.main;
+package com.xworkz.association.thing;
 
 public class SunRise {
 	public boolean rise;
