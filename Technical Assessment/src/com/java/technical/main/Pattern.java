@@ -13,13 +13,16 @@ public class Pattern {
 		int s = 3;
 		for (int l = 0; l < s; l++) {
 			for (int m = 0; m < s; m++) {
-				if (l == 0 && m == 0 || l == 1 && m == 0 || l ==1 && m == 1 || l == 2 && m == 0 || l == 2 && m == 1
-						|| l == 2 && m == 2) {
-					System.out.print("*");
+				if (l == 0 && m == 0 || 
+					l == 1 && m == 0 || l == 1 && m == 1 ||
+					l == 2 && m == 0 || l == 2 && m == 1 || l == 2 && m == 2) {
+					System.out.print("* ");
 				} else {
 					System.out.println(" ");
 				}
+
 			}
+
 		}
 	}
 }
