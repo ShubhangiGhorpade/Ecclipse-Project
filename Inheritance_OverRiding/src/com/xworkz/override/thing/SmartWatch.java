@@ -8,6 +8,7 @@ public class SmartWatch extends Clock {
 
 	@Override
 	public boolean getSmart() {
+		System.out.println("Over ridden method in smart watch");
 		return true;
 	}
 }

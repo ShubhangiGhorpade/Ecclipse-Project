@@ -8,6 +8,7 @@ public class RoseGarland extends Garland {
 
 	@Override
 	public boolean getMixed() {
+		System.out.println("Over ridden method in RoseGarland");
 		return true;
 	}
 }

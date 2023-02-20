@@ -8,6 +8,7 @@ public class Mud extends Soil {
 
 	@Override
 	public boolean getDry() {
+		System.out.println("Over ridden method in Mud");
 		return true;
 	}
 

@@ -8,6 +8,7 @@ public class HeartBallon extends Balloon {
 
 	@Override
 	public int getPrice() {
+		System.out.println("Over ridden method in heartballoon");
 		return 30;
 	}
 }

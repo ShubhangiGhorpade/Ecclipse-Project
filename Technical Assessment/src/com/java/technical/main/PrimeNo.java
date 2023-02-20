@@ -6,8 +6,8 @@ public class PrimeNo {
 		int n = 5;
 		if (n % 2 == 0) {
 			System.out.println(" Not Prime No");
-		}else {
-		System.out.println("Prime No");
+		} else {
+			System.out.println("Prime No");
 		}
 	}
 

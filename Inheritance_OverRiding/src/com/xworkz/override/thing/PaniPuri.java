@@ -8,6 +8,7 @@ public class PaniPuri extends Poori {
 
 	@Override
 	public String getShape() {
+		System.out.println("Over ridden method in Panipuri");
 		return "Round";
 	}
 }

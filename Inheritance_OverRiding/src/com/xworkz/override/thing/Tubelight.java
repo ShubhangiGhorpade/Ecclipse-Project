@@ -8,6 +8,7 @@ public class Tubelight extends Light {
 
 	@Override
 	public String getBrand() {
+		System.out.println("Over ridden method in Tubelight ");
 		return "Godrej";
 	}
 

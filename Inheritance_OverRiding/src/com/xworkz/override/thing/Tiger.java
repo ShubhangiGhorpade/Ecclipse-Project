@@ -9,6 +9,7 @@ public class Tiger extends Animal {
 	@Override
 
 	public boolean getWild() {
+		System.out.println("Over ridden method in Tiger");
 		return false;
 	}
 }

@@ -16,12 +16,10 @@ public class Pattern {
 				if (l == 0 && m == 0 || l == 1 && m == 0 || l == 1 && m == 1 || l == 2 && m == 0 || l == 2 && m == 1
 						|| l == 2 && m == 2) {
 					System.out.print("* ");
-				} else {
-					System.out.println(" ");
 				}
 
 			}
-
+			System.out.println("");
 		}
 	}
 }
