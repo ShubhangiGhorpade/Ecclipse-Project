@@ -20,6 +20,9 @@ public class FishRunner {
 		boolean equal1 = fish2.equals(fish1);
 		System.out.println(equal1);
 
+		boolean equal2 = fish.equals(fish2);
+		System.out.println(equal2);
+
 	}
 
 }

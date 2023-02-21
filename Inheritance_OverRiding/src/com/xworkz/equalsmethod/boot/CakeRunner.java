@@ -20,6 +20,9 @@ public class CakeRunner {
 		boolean equal1 = cake.equals(cake2);
 		System.out.println(equal1);
 
+		boolean equal2 = cake1.equals(cake2);
+		System.out.println(equal2);
+
 	}
 
 }

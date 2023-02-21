@@ -19,6 +19,9 @@ public class FootWareRunner {
 
 		boolean equal1 = foot1.equals(foot2);
 		System.out.println(equal1);
+		
+		boolean equal2 = foot.equals(foot2);
+		System.out.println(equal2);
 
 	}
 

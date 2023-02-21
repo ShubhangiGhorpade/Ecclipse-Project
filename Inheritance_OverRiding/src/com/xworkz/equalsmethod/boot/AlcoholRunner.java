@@ -20,6 +20,9 @@ public class AlcoholRunner {
 		boolean equal1 = alcohol.equals(alcohol2);
 		System.out.println(equal1);
 
+		boolean equal2 = alcohol1.equals(alcohol2);
+		System.out.println(equal2);
+
 	}
 
 }
