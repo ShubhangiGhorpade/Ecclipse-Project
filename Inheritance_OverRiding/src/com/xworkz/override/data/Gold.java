@@ -1,6 +1,7 @@
 package com.xworkz.override.data;
 
 public class Gold {
+
 	private String brand;
 	private double price;
 	private boolean good;

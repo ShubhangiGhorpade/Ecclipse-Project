@@ -1,6 +1,7 @@
 package com.xworkz.override.data;
 
 public class Paint {
+
 	private String brand;
 	private double price;
 	private int validity;

@@ -1,6 +1,7 @@
 package com.xworkz.override.data;
 
 public class Door {
+
 	private boolean open;
 	private String material;
 	private String shape;
