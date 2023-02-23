@@ -1,13 +1,14 @@
 package com.xworkz.inheritance.objRunner;
 
+import com.xworkz.inheritance.obj.Cricket;
+import com.xworkz.inheritance.obj.Sport;
+
 public class Runner {
 
 	public static void main(String[] args) {
 		Converter con = new Converter();
-		con.display();
-		con.display1();
-		con.display2();
-		con.display3();
-		con.display4();
+		Sport sport =new Cricket();
+		
+		con.display(sport);
 	}
 }

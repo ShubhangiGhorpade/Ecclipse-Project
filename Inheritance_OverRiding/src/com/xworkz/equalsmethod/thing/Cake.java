@@ -1,6 +1,7 @@
 package com.xworkz.equalsmethod.thing;
 
 public class Cake {
+
 	private String flavour;
 	private int weight;
 	private String shape;
