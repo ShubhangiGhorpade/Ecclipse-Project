@@ -5,12 +5,13 @@ public class Brand {
 	public String colour;
 
 	public void init(String type, String colour) {
-		this.type=type;
-		this.colour=colour;
+		this.type = type;
+		this.colour = colour;
 	}
+
 	public void show() {
-		System.out.println("Type :"+this.type);
-		System.out.println("Colour :"+this.colour);
+		System.out.println("Type :" + this.type);
+		System.out.println("Colour :" + this.colour);
 	}
 
 }

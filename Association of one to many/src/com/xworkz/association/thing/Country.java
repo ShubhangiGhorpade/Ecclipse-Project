@@ -7,7 +7,7 @@ public class Country {
 	public String president;
 	public boolean developed;
 	public State state;
-	public CountryName country = CountryName.INDIA;
+	public CountryName country;
 
 	public void setPresident(String president) {
 		this.president = president;
