@@ -122,7 +122,7 @@ public class ApplicationSeriveImp implements ApplicationService {
 			} else {
 				System.err.println("version is invalid");
 			}
-			if (appName != null && !appName.isEmpty() && appName.length() < 3 && appName.length() > 30) {
+			if (appName != null && !appName.isEmpty() && appName.length() > 3 && appName.length() < 30) {
 				System.out.println("AppName is valid");
 				validAppName = true;
 			} else {
@@ -154,7 +154,7 @@ public class ApplicationSeriveImp implements ApplicationService {
 			}
 			LocalDate date1 = LocalDate.now().plusDays(1);
 			LocalDate startDate = LocalDate.of(2005, 1, 1);
-			if (firstVersionReleaseDate != null && !firstVersionReleaseDate.isBefore(date1)
+			if (firstVersionReleaseDate != null && firstVersionReleaseDate.isBefore(date1)
 					&& firstVersionReleaseDate.isAfter(startDate)) {
 				System.out.println("firstVersionReleaseDate is valid");
 				validFirstVersionReleaseDate = true;
@@ -162,16 +162,16 @@ public class ApplicationSeriveImp implements ApplicationService {
 				System.err.println("firstVersionReleaseDate is invalid");
 			}
 			LocalDate currentVersion = LocalDate.of(2022, 1, 14);
-			if (currentVersionReleaseDate != null && !currentVersionReleaseDate.isEqual(currentVersion)) {
+			if (currentVersionReleaseDate != null && currentVersionReleaseDate.isEqual(currentVersion)) {
 				System.out.println("currentVersionReleaseDate is valid");
 				validCurrentVersionReleaseDate = true;
 			} else {
 				System.err.println("currentVersionReleaseDate is invalid");
 			}
 			LocalDate nextVersion = LocalDate.now().plusDays(1);
-			LocalDate tommorow = LocalDate.of(2023, 03, 15);
-			if (nextVersionReleaseDate != null && !nextVersionReleaseDate.isBefore(nextVersion)
-					&& !nextVersionReleaseDate.isAfter(tommorow)) {
+			LocalDate tommorow = LocalDate.of(2025, 3, 15);
+			if (nextVersionReleaseDate != null && nextVersionReleaseDate.isBefore(tommorow)
+					&& nextVersionReleaseDate.isAfter(nextVersion)) {
 				System.out.println("nextVersionReleaseDate is valid");
 				validNextVersionReleaseDate = true;
 			} else {
@@ -182,6 +182,16 @@ public class ApplicationSeriveImp implements ApplicationService {
 				validDate = true;
 			} else {
 				System.err.println("date is invalid");
+			}
+			if (validAgeLimit && validAppName && validCreated && validCurrentVersionReleaseDate && validDate
+					&& validDeveloped && validFirstVersionReleaseDate && validInternetNeeded && validLang
+					&& validMinProcessorSpeed && validMinRamSpaceRequired && validNextVersionReleaseDate
+					&& validNoOfDownloads && validOSType && validPrice && validRating && validSize && validTrialDays
+					&& validType && validVersion) {
+				System.out.println("dto is valid");
+				return true;
+			} else {
+				System.out.println("dto is invalid");
 			}
 
 		} else {

@@ -28,6 +28,10 @@ public class ApplicationRunner {
 		application.setPrice(25);
 		application.setRating(4);
 		application.setVersion(2);
+		application.setTrialDays(2);
+		application.setCurrentVersionReleaseDate(LocalDate.of(2022, 1, 14));
+		application.setFirstVersionReleaseDate(LocalDate.of(2006, 8, 15));
+		application.setNextVersionReleaseDate(LocalDate.of(2024, 1, 15));
 		System.out.println(application);
 
 		ApplicationService service = new ApplicationSeriveImp();
