@@ -2,7 +2,12 @@ package com.xworkz.application.boot;
 
 import java.time.LocalDate;
 
+import com.xworkz.application.constant.Language;
+import com.xworkz.application.constant.OSTypeSupported;
+import com.xworkz.application.constant.Type;
 import com.xworkz.application.dto.ApplicationDTO;
+import com.xworkz.application.service.ApplicationSeriveImp;
+import com.xworkz.application.service.ApplicationService;
 
 public class ApplicationRunner {
 	public static void main(String[] args) {
@@ -10,10 +15,24 @@ public class ApplicationRunner {
 		application.setAppName("Instagram");
 		application.setDate(LocalDate.of(1999, 8, 21));
 		application.setDevelopedBy("Shaanu");
-		application.setSince(1988);
+		application.setAgeLimit(18);
+		application.setCreatedBy("Shubhangi");
 		application.setSize(22);
+		application.setInternetNeeded(true);
+		application.setLanguage(Language.ENGLISH);
+		application.setMinProcessorSpeed(40);
+		application.setType(Type.SOCIALMEDIA);
+		application.setMinRamSpaceRequired(18);
+		application.setOsType(OSTypeSupported.WINDOWS);
+		application.setNoOfDownloads(5);
+		application.setPrice(25);
+		application.setRating(4);
+		application.setVersion(2);
 		System.out.println(application);
-		System.out.println(application.hashCode());
-		System.out.println(application.equals(application));
+
+		ApplicationService service = new ApplicationSeriveImp();
+		boolean save = service.validateAndThenSave(application);
+		System.out.println(save);
+
 	}
 }
