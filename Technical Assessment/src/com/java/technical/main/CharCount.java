@@ -1,4 +1,4 @@
-package com.java.technical.main;
+ package com.java.technical.main;
 
 import java.util.Scanner;
 

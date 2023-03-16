@@ -41,64 +41,71 @@ public class HeadPhoneServiceImp implements HeadPhoneService {
 				System.out.println("modelNo is valid");
 				validModel = true;
 			} else {
-				System.out.println("modelNo is invalid");
+				System.err.println("modelNo is invalid");
 			}
 			if (validPrice(price)) {
 				System.out.println("Price is valid");
 				validPrice = true;
 			} else {
-				System.out.println("Price is invalid");
+				System.err.println("Price is invalid");
 			}
-			if (bass) {
+			if (!bass) {
 				System.out.println("bass is valid");
 				validBass = true;
 			} else {
-				System.out.println("bass is invalid");
+				System.err.println("bass is invalid");
 			}
 			if (validString(customerName)) {
 				System.out.println("customerName is valid");
 				validCustomer = true;
 			} else {
-				System.out.println("customerName is invalid");
+				System.err.println("customerName is invalid");
 			}
 			if (validInt(invoiceNo)) {
 				System.out.println("invoiceNo is valid");
 				validInvoice = true;
 			} else {
-				System.out.println("invoiceNo is invalid");
+				System.err.println("invoiceNo is invalid");
 			}
 			if (validInt(warrantyPeriod)) {
 				System.out.println("warrantyPeriod is valid");
 				validWarranty = true;
 			} else {
-				System.out.println("warrantyPeriod is invalid");
+				System.err.println("warrantyPeriod is invalid");
 			}
 			if (brand != null) {
 				System.out.println("brand is valid");
 				validBrand = true;
 			} else {
-				System.out.println("brand is invalid");
+				System.err.println("brand is invalid");
 			}
 			if (colour != null) {
 				System.out.println("colour is valid");
 				validColour = true;
 			} else {
-				System.out.println("colour is invalid");
+				System.err.println("colour is invalid");
 			}
 			if (typeAndWeight != null) {
 				System.out.println("typeAndWeight is valid");
 				validtypeAndWeight = true;
 			} else {
-				System.out.println("typeAndWeight is invalid");
+				System.err.println("typeAndWeight is invalid");
 			}
 			if (validDate(mfgDate, LocalDate.of(2020, 1, 1))) {
 				System.out.println("Mfg is valid");
 				validMfg = true;
 			} else {
-				System.out.println("Mfg is invalid");
+				System.err.println("Mfg is invalid");
+			}
+			if (validFlag(validBass && validBrand && validColour && validCustomer && validInvoice && validMfg
+					&& validModel && validPrice && validtypeAndWeight && validWarranty)) {
+				System.out.println("dto is valid");
+				return true;
+			} else {
+				System.err.println("dto is invalid");
 			}
 		} else {
-			System.out.println("dto is null");
+			System.err.println("dto is null");
 		}
 		return false;
 	}
