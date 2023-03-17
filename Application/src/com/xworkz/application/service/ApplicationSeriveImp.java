@@ -6,8 +6,15 @@ import com.xworkz.application.constant.Language;
 import com.xworkz.application.constant.OSTypeSupported;
 import com.xworkz.application.constant.Type;
 import com.xworkz.application.dto.ApplicationDTO;
+import com.xworkz.application.repository.ApplicationRepository;
 
 public class ApplicationSeriveImp implements ApplicationService {
+
+	private ApplicationRepository applicationRepository;
+
+	public ApplicationSeriveImp(ApplicationRepository applicationRepository) {
+		this.applicationRepository = applicationRepository;
+	}
 
 	@Override
 	public boolean validateAndThenSave(ApplicationDTO dto) {
@@ -188,8 +195,9 @@ public class ApplicationSeriveImp implements ApplicationService {
 					&& validMinProcessorSpeed && validMinRamSpaceRequired && validNextVersionReleaseDate
 					&& validNoOfDownloads && validOSType && validPrice && validRating && validSize && validTrialDays
 					&& validType && validVersion) {
+				boolean saved = this.applicationRepository.save(dto);
 				System.out.println("dto is valid");
-				return true;
+				return saved;
 			} else {
 				System.out.println("dto is invalid");
 			}
