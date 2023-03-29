@@ -21,6 +21,8 @@ public class HeadPhoneRunner {
 		HeadPhoneService phone = new HeadPhoneServiceImp(repo);
 		boolean save = phone.validateAndThenSave(head);
 		System.out.println(save);
+		
+		
 		System.out.println(" ");
 		HeadPhoneDTO head1 = new HeadPhoneDTO("273SS", 500, false, "Shaho", 28, LocalDate.of(2021, 2, 5), 6, Brand.BOAT,
 				Colour.WHITE, TypeAndWeight.OVER_EAR);
