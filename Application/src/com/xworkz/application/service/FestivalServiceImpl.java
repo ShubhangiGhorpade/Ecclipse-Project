@@ -49,7 +49,7 @@ public class FestivalServiceImpl implements FestivalService {
 			if (validStartDate(startDate)) {
 				System.out.println("Start Date is valid");
 				validStartDate = true;
-			} else { 
+			} else {
 				System.err.println("Start Date is valid");
 			}
 			if (validStartDate(endDate) && endDate.isAfter(startDate)) {
@@ -72,8 +72,13 @@ public class FestivalServiceImpl implements FestivalService {
 			}
 			if (flags(validId && validName && validEndDate && validGodName && validStartDate && validSweet)) {
 				System.out.println("Dto is valid");
-				boolean save = this.repo.save(dto);
-				return save;
+				boolean exists = this.repo.isExist(dto);
+				if (!exists) {
+					boolean save = this.repo.save(dto);
+					return save;
+				} else {
+					System.out.println("Doesnot Exists");
+				}
 			} else {
 				System.err.println("Dto is invalid");
 				throw new InvalidFestivalException("fill the proper requriment");
@@ -83,6 +88,11 @@ public class FestivalServiceImpl implements FestivalService {
 			System.err.println("Dto is null");
 		}
 		return false;
+	}
+
+	@Override
+	public int totalCount() {
+		return this.repo.totalCount();
 	}
 
 }

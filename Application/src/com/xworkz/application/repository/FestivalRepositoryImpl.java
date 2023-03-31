@@ -23,4 +23,27 @@ public class FestivalRepositoryImpl implements FestivalRepository {
 
 	}
 
+	@Override
+	public boolean isExist(FestivalDTO dto) {
+		if (this.index == 0) {
+			System.out.println("First member is at 0th index");
+			return false;
+		} else {
+			for (int i = 0; i < this.index; i++) {
+				FestivalDTO tempDto = this.festival[i];
+				if (tempDto.equals(dto)) {
+					System.out.println("First member is saved");
+					return true;
+				}
+
+			}
+		}
+		return false;
+	}
+
+	@Override
+	public int totalCount() {
+		return this.index;
+	}
+
 }
