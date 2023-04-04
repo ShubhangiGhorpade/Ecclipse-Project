@@ -99,7 +99,7 @@ public class DesertServiceImp implements DesertService {
 			System.out.println("dto not null");
 			return this.desertRepository.find(dto);
 		} else {
-			throw new DesertDataInvalidException("fill proper data");
+			throw new DesertDataInvalidException("fill proper data1");
 		}
 	}
 
@@ -108,7 +108,7 @@ public class DesertServiceImp implements DesertService {
 		if (validString(name)) {
 			return this.desertRepository.findByName(name);
 		} else {
-			throw new DesertDataInvalidException("fill proper data");
+			throw new DesertDataInvalidException("fill proper data2");
 		}
 
 	}
@@ -118,7 +118,7 @@ public class DesertServiceImp implements DesertService {
 		if (validString(name)) {
 			return this.desertRepository.findAreaByName(name);
 		} else {
-			throw new DesertDataInvalidException("fill proper data");
+			throw new DesertDataInvalidException("fill proper data3");
 		}
 	}
 
@@ -128,7 +128,7 @@ public class DesertServiceImp implements DesertService {
 		if (validString(name) && validString(country) && validDouble(area)) {
 			return this.desertRepository.findByNameAndCountryAndArea(name, country, area);
 		}
-		throw new DesertDataInvalidException("fill proper data");
+		throw new DesertDataInvalidException("fill proper data4");
 	}
 
 	@Override
