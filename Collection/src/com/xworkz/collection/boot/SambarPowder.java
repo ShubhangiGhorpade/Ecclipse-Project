@@ -15,7 +15,7 @@ public class SambarPowder {
 		sambar.add("Content");
 		sambar.add("name");
 		sambar.add("tag");
-		sambar.add(null);
+		sambar.add(null); 
 		sambar.add("type");
 		sambar.add("turmeric");
 		sambar.add("ChatMasala");
