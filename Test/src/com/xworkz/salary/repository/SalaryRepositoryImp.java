@@ -4,7 +4,7 @@ import com.xworkz.salary.dto.SalaryDTO;
 
 public class SalaryRepositoryImp implements SalaryRepository {
 
-	private SalaryDTO[] salary = new SalaryDTO[3];
+	private SalaryDTO[] salary = new SalaryDTO[4];
 	private int salaryIndex = 0;
 
 	@Override
