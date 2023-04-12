@@ -22,22 +22,14 @@ public class Runner1 {
 		casts.add(null);
 		casts.add(null);
 
-		for (String cast : casts) {
-			if (cast != null) {
-				System.out.println(cast);
-			}
-		}
-
 		System.out.println("Total:" + casts.size());
 
 		Iterator<String> movieCast = casts.iterator();
 		while (movieCast.hasNext()) {
 			System.out.println(movieCast.next());
 			movieCast.remove();
-			}
+			System.out.println();
 		}
-		
-
-	
+	}
 
 }
