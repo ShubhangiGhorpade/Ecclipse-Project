@@ -1,6 +1,6 @@
 package com.xworkz.collection.lambdaExp.util;
 
-import com.xworkz.collection.lambdaExp.thing.Hunter;
+import com.xworkz.collection.lambdaExp.functionalInterface.Hunter;
 
 public class Util {
 

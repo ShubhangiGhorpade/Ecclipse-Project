@@ -1,4 +1,4 @@
-package com.xworkz.collection.lambdaExp.thing;
+package com.xworkz.collection.lambdaExp.functionalInterface;
 
 @FunctionalInterface
 public interface Hunter {
