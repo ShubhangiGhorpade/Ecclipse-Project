@@ -6,7 +6,8 @@ public class RunnerUtil {
 
 	public static void test(Runner runner) {
 
-		runner.running(500d);
+		double running = runner.running(500d);
+		System.out.println("Running:" + running);
 	}
 
 }

@@ -7,14 +7,23 @@ public class EaterRunner {
 
 	public static void main(String[] args) {
 		Eater eater = (item, quantity) -> {
-			System.out.println("Item:" + item);
-			System.out.println("Item in lowercase:" + item.toLowerCase());
-			System.out.println("Item in uppercase:" + item.toUpperCase());
 
-			return null;
+			return item;
+
+		};
+		Eater eater1 = (item, quantity) -> {
+
+			return item.toLowerCase();
+
+		};
+		Eater eater2 = (item, quantity) -> {
+
+			return item.toUpperCase();
 
 		};
 		EaterUtil.test(eater);
+		EaterUtil.test(eater1);
+		EaterUtil.test(eater2);
 	}
 
 }

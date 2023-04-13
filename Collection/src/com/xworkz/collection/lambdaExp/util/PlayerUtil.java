@@ -6,7 +6,8 @@ public class PlayerUtil {
 
 	public static void test(Player player) {
 
-		player.on("Hardik", "Mumbai");
+		String on = player.on("Hardik", "Mumbai");
+		System.out.println("On:" + on);
 	}
 
 }

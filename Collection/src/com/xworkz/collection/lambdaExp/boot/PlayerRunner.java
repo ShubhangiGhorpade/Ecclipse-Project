@@ -8,13 +8,22 @@ public class PlayerRunner {
 	public static void main(String[] args) {
 		Player player = (name, state) -> {
 
-			System.out.println("Player name in uppercase:" + name.toUpperCase());
-			System.out.println("Player name in lowercase:" + name.toLowerCase());
-			System.out.println("Name and State:" + name + " , " + state);
-			return null;
+			return name.toUpperCase();
+
+		};
+		Player player1 = (name, state) -> {
+
+			return name.toLowerCase();
+
+		};
+		Player player2 = (name, state) -> {
+
+			return name +" "+ state;
 
 		};
 		PlayerUtil.test(player);
+		PlayerUtil.test(player1);
+		PlayerUtil.test(player2);
 
 	}
 

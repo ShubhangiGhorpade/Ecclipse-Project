@@ -8,8 +8,8 @@ public class RunnerMain {
 	public static void main(String[] args) {
 		Runner runner1 = (dist) -> {
 
-			System.out.println("Distance:" + dist);
-			return 0;
+		
+			return dist;
 
 		};
 		RunnerUtil.test(runner1);
