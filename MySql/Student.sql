@@ -32,3 +32,4 @@ SELECT phonenumber from details;-- specific column
 
 -- if we want anything that must be not equal to null we need to provide 
 -- Alter table tableName Modify column columnName datatype not null.. 
+
