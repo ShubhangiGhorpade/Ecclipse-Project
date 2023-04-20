@@ -59,9 +59,8 @@ public class GroceryRunner {
 		System.out.println("adding an element over iteration");
 		ListIterator<GroceryDTO> listIterator2 = grocerys1.listIterator();
 		while (listIterator2.hasNext()) {
-			grocerys1.add(new GroceryDTO(7, "Dal", 105.5d, 2f));
 			GroceryDTO next = listIterator2.next();
-			System.out.println(next);
+			listIterator2.add(new GroceryDTO(7, "Dal", 105.5d, 2f));
 		}
 
 		System.out.println("          ");

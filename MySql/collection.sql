@@ -36,3 +36,12 @@ select * from details where eLocation='Bijapur' or eLocation='ITPL';
 select distinct eLocation from details;
 
 select * from details where not eLocation='Bijapur';
+
+select * from details limit 1;
+select max(eName) from details;-- depending upon the alphabetic order 
+select min(eName) from details; -- depending upon the alphabetic order 
+select count(eName) from details;-- calculates the total num of rows
+select sum(employeeId) from details;-- adds the total value from the columndetails
+
+select eName from details where min(empoloyee);
+
