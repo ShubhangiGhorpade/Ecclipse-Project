@@ -9,10 +9,12 @@ import javax.validation.ValidatorFactory;
 
 import com.xworkz.policeStation.dto.AmbulanceDTO;
 import com.xworkz.policeStation.repository.AmbulanceRepository;
+import com.xworkz.policeStation.util.ValidateUtil;
 
 public class AmbulanceServiceImpl implements AmbulanceService {
 
 	private AmbulanceRepository ambulanceRepository;
+	private ValidateUtil<AmbulanceDTO> validateUtil = new ValidateUtil<AmbulanceDTO>();
 
 	public AmbulanceServiceImpl(AmbulanceRepository ambulanceRepository) {
 		this.ambulanceRepository = ambulanceRepository;
@@ -21,12 +23,8 @@ public class AmbulanceServiceImpl implements AmbulanceService {
 	@Override
 	public boolean save(AmbulanceDTO dto) {
 		if (dto != null) {
-			ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-			Validator validator = factory.getValidator();
-			Set<ConstraintViolation<AmbulanceDTO>> validate = validator.validate(dto);
-			System.out.println(validate.size());
-			validate.forEach(cv -> System.err.println(cv.getPropertyPath() + " " + cv.getMessage()));
-			if (validate.isEmpty()) {
+			System.out.println("Running in save:" + dto);
+			if (validateUtil.validate(dto)) {
 				return this.ambulanceRepository.save(dto);
 			}
 		}

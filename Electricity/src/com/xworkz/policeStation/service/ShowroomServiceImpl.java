@@ -9,9 +9,11 @@ import javax.validation.ValidatorFactory;
 
 import com.xworkz.policeStation.dto.ShowroomDTO;
 import com.xworkz.policeStation.repository.ShowroomRepository;
+import com.xworkz.policeStation.util.ValidateUtil;
 
 public class ShowroomServiceImpl implements ShowroomService {
 	private ShowroomRepository showroomRepository;
+	private ValidateUtil<ShowroomDTO> validateUtil=new ValidateUtil<ShowroomDTO>();
 
 	public ShowroomServiceImpl(ShowroomRepository showroomRepository) {
 		this.showroomRepository = showroomRepository;
@@ -22,12 +24,8 @@ public class ShowroomServiceImpl implements ShowroomService {
 		System.out.println("Running validateAndThanSave in ShowroomServiceImpl: " + dto);
 		if (dto != null) {
 			System.out.println("dto is not null");
-			ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-			Validator validator = factory.getValidator();
-			Set<ConstraintViolation<ShowroomDTO>> constrints = validator.validate(dto);
-			System.out.println("Total violation :" + constrints.size());
-			constrints.forEach(cv -> System.err.println(cv.getPropertyPath() + " " + cv.getMessage()));
-			if (constrints.isEmpty()) {
+
+			if (validateUtil.validate(dto)) {
 				System.out.println("no violation in Constrints");
 
 				return this.showroomRepository.save(dto);

@@ -9,10 +9,12 @@ import javax.validation.ValidatorFactory;
 
 import com.xworkz.policeStation.dto.MarriageDTO;
 import com.xworkz.policeStation.repository.MarriageRepository;
+import com.xworkz.policeStation.util.ValidateUtil;
 
 public class MarriageServiceImpl implements MarriageService {
 
 	private MarriageRepository marriageRepository;
+	private ValidateUtil<MarriageDTO> validateUtil = new ValidateUtil<MarriageDTO>();
 
 	public MarriageServiceImpl(MarriageRepository marriageRepository) {
 		this.marriageRepository = marriageRepository;
@@ -22,12 +24,7 @@ public class MarriageServiceImpl implements MarriageService {
 	public boolean validateAndThenSave(MarriageDTO dto) {
 		System.out.println("Running validate and save:" + dto);
 
-		ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-		Validator validator = factory.getValidator();
-		Set<ConstraintViolation<MarriageDTO>> validate = validator.validate(dto);
-		System.out.println(validate.size());
-		validate.forEach(cv -> System.out.println(cv.getPropertyPath() + " " + cv.getMessage()));
-		if (validate.isEmpty()) {
+		if (validateUtil.validate(dto)) {
 			return this.marriageRepository.save(dto);
 		}
 		return false;

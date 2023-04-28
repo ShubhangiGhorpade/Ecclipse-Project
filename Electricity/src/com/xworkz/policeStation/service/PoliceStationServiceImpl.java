@@ -11,10 +11,12 @@ import javax.validation.ValidatorFactory;
 
 import com.xworkz.policeStation.dto.PoliceStationDTO;
 import com.xworkz.policeStation.repository.PoliceStationRepository;
+import com.xworkz.policeStation.util.ValidateUtil;
 
 public class PoliceStationServiceImpl implements PoliceStationService {
 
 	private PoliceStationRepository policeStationRepository;
+	private ValidateUtil<PoliceStationDTO> validateUtil=new ValidateUtil<PoliceStationDTO>();
 
 	public PoliceStationServiceImpl(PoliceStationRepository policeStationRepository) {
 		this.policeStationRepository = policeStationRepository;
@@ -24,13 +26,7 @@ public class PoliceStationServiceImpl implements PoliceStationService {
 	public boolean validateAndSave(PoliceStationDTO dto) {
 		if (dto != null) {
 			System.out.println("validate and then save in service:" + dto);
-
-			ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-			Validator validator = factory.getValidator();
-			Set<ConstraintViolation<PoliceStationDTO>> validate = validator.validate(dto);
-			System.out.println("total violation:" + validate.size());
-			validate.forEach(cv -> System.err.println(cv.getPropertyPath() + " " + cv.getMessage()));
-			if (validate.isEmpty()) {
+			if (validateUtil.validate(dto)) {
 
 				this.policeStationRepository.save(dto);
 				return true;
