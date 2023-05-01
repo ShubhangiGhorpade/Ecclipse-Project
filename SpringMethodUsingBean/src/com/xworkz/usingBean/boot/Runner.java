@@ -81,6 +81,30 @@ public class Runner {
 				spring.getBean("lens", Short.class));
 		System.out.println(
 				spring.getBean("size", Short.class));
+
+		System.out.println("      ");
+		System.out.println(
+				spring.getBean("bits", Byte.class));
+		System.out.println(
+				spring.getBean("coin", Byte.class));
+		System.out.println(
+				spring.getBean("marbles", Byte.class));
+		System.out.println(
+				spring.getBean("ring", Byte.class));
+		System.out.println(
+				spring.getBean("bottle", Byte.class));
+		System.out.println(
+				spring.getBean("spoon", Byte.class));
+		System.out.println(
+				spring.getBean("bill", Byte.class));
+		System.out.println(
+				spring.getBean("charge", Byte.class));
+		System.out.println(
+				spring.getBean("chappal", Byte.class));
+
+		System.out.println("      ");
+		System.out.println(
+				spring.getBean("MobileNo", Long.class));
 	}
 
 }
