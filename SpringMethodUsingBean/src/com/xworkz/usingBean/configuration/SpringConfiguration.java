@@ -173,13 +173,13 @@ public class SpringConfiguration {
 	}
 
 	@Bean
-	public Short weight() {
+	public Short weight1() {
 		System.out.println("registering weight");
 		return 34;
 	}
 
 	@Bean
-	public Short distance() {
+	public Short distance1() {
 		System.out.println("registering distance");
 		return 9;
 	}
@@ -260,5 +260,250 @@ public class SpringConfiguration {
 	public long MobileNo() {
 		System.out.println("registering MobileNo");
 		return 6364123100l;
+	}
+
+	@Bean
+	public Boolean female() {
+		System.out.println(
+				"Running female in BooleanConfiguration");
+		return true;
+	}
+
+	@Bean
+	public Boolean male() {
+		System.out.println(
+				"Running male in BooleanConfiguration");
+		return true;
+	}
+
+	@Bean
+	public Boolean married() {
+		System.out.println(
+				"Running married in BooleanConfiguration");
+		return false;
+	}
+
+	@Bean
+	public Boolean unmarried() {
+		System.out.println(
+				"Running unmarried in BooleanConfiguration");
+		return true;
+	}
+
+	@Bean
+	public Boolean studying() {
+		System.out.println(
+				"Running studying in BooleanConfiguration");
+		return true;
+	}
+
+	@Bean
+	public Boolean working() {
+		System.out.println(
+				"Running working in BooleanConfiguration");
+		return false;
+	}
+
+	@Bean
+	public Boolean singer() {
+		System.out.println(
+				"Running singer in BooleanConfiguration");
+		return false;
+	}
+
+	@Bean
+	public Character div1() {
+		System.out.println(
+				"Running div1 in CharConfiguration");
+		return 'A';
+	}
+
+	@Bean
+	public Character div2() {
+		System.out.println(
+				"Running div2 in CharConfiguration");
+		return 'B';
+	}
+
+	@Bean
+	public Character div3() {
+		System.out.println(
+				"Running div3 in CharConfiguration");
+		return 'C';
+	}
+
+	@Bean
+	public Character div4() {
+		System.out.println(
+				"Running div4 in CharConfiguration");
+		return 'D';
+	}
+
+	@Bean
+	public Character div5() {
+		System.out.println(
+				"Running div5 in CharConfiguration");
+		return 'E';
+	}
+
+	@Bean
+	public Character div6() {
+		System.out.println(
+				"Running div6 in CharConfiguration");
+		return 'F';
+	}
+
+	@Bean
+	public Double height2() {
+		System.out.println(
+				"Running height in DoubleConfiguration");
+		return 5.6;
+	}
+
+	@Bean
+	public Double weight2() {
+		System.out.println(
+				"Running weight in DoubleConfiguration");
+		return 39.9;
+	}
+
+	@Bean
+	public Double roomSize() {
+		System.out.println(
+				"Running roomSize in DoubleConfiguration");
+		return 29.8;
+	}
+
+	@Bean
+	public Double waistSize() {
+		System.out.println(
+				"Running waistSize in DoubleConfiguration");
+		return 32.6;
+	}
+
+	@Bean
+	public Double iceCreamQuantity() {
+		System.out.println(
+				"Running iceCreamQuantity in DoubleConfiguration");
+		return 29.7;
+	}
+
+	@Bean
+	public Double goldRate() {
+		System.out.println(
+				"Running goldRate in DoubleConfiguration");
+		return 57008.56;
+	}
+
+	@Bean
+	public Double silverRate() {
+		System.out.println(
+				"Running silverRate in DoubleConfiguration");
+		return 20890.45;
+	}
+
+	@Bean
+	public Double ringSize() {
+		System.out.println(
+				"Running ringSize in DoubleConfiguration");
+		return 2.3;
+	}
+
+	@Bean
+	public Double bangleSize() {
+		System.out.println(
+				"Running bangleSize in DoubleConfiguration");
+		return 2.5;
+	}
+
+	@Bean
+	public Float salary() {
+		System.out.println(
+				"Running salary in FloatConfiguration");
+		return 25000.50f;
+	}
+
+	@Bean
+	public Float height() {
+		System.out.println(
+				"Running height in FloatConfiguration");
+		return 4.10f;
+	}
+
+	@Bean
+	public Float weight() {
+		System.out.println(
+				"Running weight in FloatConfiguration");
+		return 53.5f;
+	}
+
+	@Bean
+	public Float distance() {
+		System.out.println(
+				"Running distance in FloatConfiguration");
+		return 350.80f;
+	}
+
+	@Bean
+	public Float cost() {
+		System.out.println(
+				"Running cost in FloatConfiguration");
+		return 500f;
+	}
+
+	@Bean
+	public Float quantityOfMilk() {
+		System.out.println(
+				"Running quantityOfMilk in FloatConfiguration");
+		return 1.5f;
+	}
+
+	@Bean
+	public Float quantityOfRice() {
+		System.out.println(
+				"Running quantityOfRice in FloatConfiguration");
+		return 25.5f;
+	}
+
+	@Bean
+	public Float wheatPrice() {
+		System.out.println(
+				"Running wheatPrice in FloatConfiguration");
+		return 1200.89f;
+	}
+
+	@Bean
+	public Float dosaLength() {
+		System.out.println(
+				"Running dosaLength in FloatConfiguration");
+		return 3.56f;
+	}
+
+	@Bean
+	public Long fatherContactNo() {
+		System.out.println(
+				"Running fatherContactNo in LongConfiguration");
+		return 9620809927l;
+	}
+
+	@Bean
+	public Long pincodeOfDharwad() {
+		System.out.println(
+				"Running pincodeOfDharwad in LongConfiguration");
+		return 580001l;
+	}
+
+	@Bean
+	public Long pincodeOfHubli() {
+		System.out.println(
+				"Running pincodeOfHubli in LongConfiguration");
+		return 5800377l;
+	}
+
+	@Bean
+	public Long pincodeOfTumkur() {
+		System.out.println(
+				"Running pincodeOfTumkur in LongConfiguration");
+		return 560023l;
 	}
 }
