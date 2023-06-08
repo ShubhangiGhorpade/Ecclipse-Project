@@ -1,14 +1,18 @@
 package com.xworkz.jpaDemo.repository;
 
 import javax.enterprise.inject.spi.InjectionTargetFactory;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.PersistenceException;
 
+import org.springframework.stereotype.Repository;
+
 import static com.xworkz.jpaDemo.util.WebSeriesUtil.*;
 import com.xworkz.jpaDemo.entity.WebSeries;
 
+@Repository
 public class WebSeriesRepoImpl implements WebSeriesRepo {
 
 	EntityManagerFactory factory = getFactory();

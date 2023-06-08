@@ -3,8 +3,11 @@ package com.xworkz.hospital.controller;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -22,7 +25,15 @@ public class DeathController implements WebMvcConfigurer {
 	}
 
 	@RequestMapping("/click")
-	public String onclick(DeathDTO dto, Model model) {
+	public String onclick(@Valid DeathDTO dto,BindingResult validateError, Model model
+			) {
+		if (validateError.hasErrors()) {
+			model.addAttribute("errorMsg", "Data is invalid");
+			model.addAttribute("error", validateError.getAllErrors());
+			validateError.getAllErrors().forEach(
+					e -> System.out.println(e.getDefaultMessage()));
+			return "display.jsp";
+		}
 		model.addAttribute("msg", "Saved successfully..." + dto.getName());
 		this.dtos.add(dto);
 		for (DeathDTO deathDTO : dtos) {
